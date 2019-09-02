@@ -47,14 +47,14 @@ class Header extends React.PureComponent {
                                 </div>
                                 <div className="row">
                                     <div className="download-buttons">
-                                        <a target="_blank" className="button google-play"
+                                        <a target="_blank" rel="noopener noreferrer" className="button google-play"
                                            href="https://play.google.com/store/apps/details?id=com.legendcity.legendcity&hl=ru">
                                             <img src="../assets/img/google-play.svg" alt=""/>
                                             <span>
                   Google Play
                 </span>
                                         </a>
-                                        <a target="_blank" className="button app-store"
+                                        <a target="_blank" rel="noopener noreferrer" className="button app-store"
                                            href="https://apps.apple.com/ru/app/legendcity/id1229070695">
                                             <img src="../assets/img/app-store.svg" alt=""/>
                                             <span>

@@ -19,7 +19,7 @@ interface MapSectionProps {
 
 const placeMark = {
     modules: ['geoObject.addon.balloon', 'geoObject.addon.hint'],
-}
+};
 
 class MapSection extends React.PureComponent<MapSectionProps, MapSectionState> {
     constructor(props: MapSectionProps) {
@@ -73,10 +73,6 @@ class MapSection extends React.PureComponent<MapSectionProps, MapSectionState> {
         };
     }
 
-    private loadPurchasesInterval: NodeJS.Timer = setInterval(() => {
-        this.getPurchases();
-        this.getMoneySave();
-    }, 5000);
 
     public componentDidMount() {
         this.getPurchases();
@@ -128,7 +124,7 @@ class MapSection extends React.PureComponent<MapSectionProps, MapSectionState> {
     }
 
     public render() {
-        const {purchases, numberOfShow, moneySpend} = this.state;
+        const {purchases} = this.state;
 
         return (
             <section id="map">

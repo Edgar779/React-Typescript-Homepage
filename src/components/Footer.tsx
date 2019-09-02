@@ -16,13 +16,17 @@ class Footer extends React.PureComponent {
                             <div className="download-app">
                                 <div className="info">Скачайте наше мобильное приложение</div>
                                 <div className="download-buttons">
-                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.legendcity.legendcity&hl=ru" className="button google-play">
+                                    <a 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        href="https://play.google.com/store/apps/details?id=com.legendcity.legendcity&hl=ru" className="button google-play">
                                         <div/>
                                         <span>
                   Google Play
                 </span>
                                     </a>
-                                    <a target="_blank" href="https://apps.apple.com/ru/app/legendcity/id1229070695" className="button app-store">
+                                    <a target="_blank" 
+                                        rel="noopener noreferrer"  href="https://apps.apple.com/ru/app/legendcity/id1229070695" className="button app-store">
                                         <div/>
                                         <span>
                    App Store

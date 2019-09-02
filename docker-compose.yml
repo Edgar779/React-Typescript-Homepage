@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  legend-main-page-client:
+    image: "legend-main-page-client"
+    ports:
+      - "55691:80"
+    volumes:
+      - ./build:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
