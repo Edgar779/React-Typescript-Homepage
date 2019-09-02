@@ -1,0 +1,654 @@
+#send-lb-on-gifts {
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    & {
+      .section-header {
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    & {
+      .section-header {
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .section-content {
+    padding-top: 90px;
+
+    .cards-list {
+      display: flex;
+
+      .cards-calculator {
+        width: 510px;
+        position: relative;
+
+        &:before {
+          content: "";
+          background-image: url(../../assets/img/calc-bg.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: -1;
+          height: 150%;
+          right: 0;
+        }
+
+        .card {
+          height: 420px;
+          z-index: 10;
+          margin-left: 150px;
+          background: #FFFFFF;
+          box-shadow: 0px 0px 12px rgba(16, 30, 69, 0.1);
+          border-radius: 10px;
+          width: 360px;
+
+          .card-content {
+            .card-header {
+              padding: 24px;
+              margin-bottom: 30px;
+
+              .card-title {
+                color: #000051;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+              }
+            }
+
+            .card-body {
+              padding: 0 24px;
+
+              .money-slider {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 7px;
+
+                .slider-title {
+                  font-weight: normal;
+                  font-size: 18px;
+                  line-height: 21px;
+                  color: #9E9E9E;
+                }
+
+                .slider-money {
+                  color: #000051;
+                  font-weight: 900;
+                  font-size: 18px;
+                  line-height: 21px;
+
+                  .money-spend {
+
+                  }
+
+                  .rub {
+                    font-size: 16px;
+                    margin-left: 6px;
+                  }
+                }
+              }
+
+              .row-slider {
+                .rangeslider {
+                  background-color: #9E9E9E;
+                  height: 2px;
+                  .rangeslider__fill {
+                    height: 4px !important;
+                    top: -1px !important;
+                    background-color: #448AFF;
+                  }
+
+                  .rangeslider__handle {
+                    box-shadow: 0px 0px 12px rgba(16, 30, 69, 0.1);
+                    border: solid 5px #E5EFFF;
+                    &:after{
+                      display: none;
+                    }
+                  }
+                }
+
+                .values-limit {
+                  display: flex;
+                  justify-content: space-between;
+
+                  .min-value, .max-value {
+                    color: #E0E0E0;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                  }
+
+                  .min-value {
+
+                  }
+
+                  .max-value {
+
+                  }
+                }
+
+              }
+            }
+
+            .card-footer {
+              padding: 45px 24px 24px 24px;
+              color: #FFFFFF;
+              background-image: url(../../assets/img/calc-footer.svg);
+              background-size: auto;
+              background-position: 50% 0;
+              background-repeat: no-repeat;
+
+              .discount-mouth {
+                margin-bottom: 28px;
+
+                .discount-mouth-title {
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 16px;
+                  margin-bottom: 8px;
+                }
+
+                .discount-mouth-price {
+                  font-weight: 900;
+                  font-size: 24px;
+                  line-height: 28px;
+                }
+              }
+
+              .discount-many-mouth {
+                .discount-many-mouth-title {
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 16px;
+                  margin-bottom: 8px;
+                }
+
+                .discount-mouth-price {
+                  font-weight: 900;
+                  font-size: 40px;
+                  line-height: 47px;
+
+                  .LB {
+                    margin-left: 16px;
+                  }
+
+                  .lb-info {
+                    margin-top: 5px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .cards-slider {
+        position: relative;
+        margin-top: -10px;
+        padding: 10px 10px 10px 8px;
+        max-width: calc(100% - 510px);
+
+        .arrow {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          left: 30px;
+          right: initial;
+          display: flex;
+          background: #FFFFFF;
+          width: 60px;
+          align-content: center;
+          justify-content: center;
+          height: 60px;
+          border-radius: 50%;
+          box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+          cursor: pointer;
+          z-index: 120;
+          &:focus {outline:0;}
+          &.swiper-arrow-next {
+            left: 510px;
+
+            &:before {
+              transform: rotate(180deg);
+            }
+          }
+
+          &:before {
+            content: "";
+            background-image: url(../../assets/img/arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            font-size: 52px;
+            opacity: 1;
+            display: block;
+            color: #448aff;
+          }
+        }
+
+        .gift-slider-carousel {
+          position: relative;
+          padding-bottom: 10px;
+
+          &:before, &:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 30px;
+            top: 0;
+            bottom: 0;
+            z-index: 10;
+          }
+
+          &:before {
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            left: 0;
+            width: 120px;
+          }
+
+          &:after {
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+            right: 0;
+          }
+
+          .slide {
+            transition: 0.3s;
+            margin-left: 0;
+            height: 420px;
+            z-index: 10;
+            border-radius: 10px;
+            width: 360px;
+            background: #FFFFFF;
+
+            .card {
+              height: 420px;
+              z-index: 10;
+              border-radius: 10px;
+              width: 360px;
+              box-shadow: 0px 0px 12px rgba(16, 30, 69, 0.1);
+
+              .card-content {
+                .card-header {
+                  height: 310px;
+                  position: relative;
+                  width: 360px;
+                  z-index: 9;
+
+                  &:after {
+                    content: "";
+                    position: absolute;
+                    height: 35px;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background: url(../../assets/img/card-footer.svg) no-repeat 0 0;
+                  }
+
+                  .card-image {
+                    width: 100%;
+                    overflow: hidden;
+                    height: 310px;
+                    border-radius: 10px 10px 0 0;
+
+                    img {
+                      height: 310px;
+                    }
+                  }
+
+                  .gift-type {
+                    position: absolute;
+                    left: 24px;
+                    top: 24px;
+                    background: #FFFFFF;
+                    border-radius: 40px;
+                    padding: 5px 10px 5px 36px;
+                    color: #9E9E9E;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 20px;
+
+                    &:before {
+                      content: "";
+                      position: absolute;
+                      left: 3px;
+                      top: 3px;
+                      background-size: contain;
+                      width: 24px;
+                      height: 24px;
+                    }
+
+                    &.coupon {
+                      &:before {
+                        background: url(../../assets/img/coupon-icon.svg) no-repeat 50% 50%;
+                      }
+                    }
+
+                    &.certificate {
+                      &:before {
+                        background: url(../../assets/img/certificate-icon.svg) no-repeat 50% 50%;
+                      }
+                    }
+                  }
+                }
+
+                .card-body {
+                  padding: 14px 24px 24px 24px;
+                  z-index: 10;
+
+                  .gift-header {
+                    position: relative;
+
+                    .gift-name {
+                      display: flex;
+
+                      .company-image {
+                        img {
+                          height: 40px;
+                          width: 40px;
+                        }
+                      }
+
+                      .company-title {
+                        margin-left: 15px;
+
+                        div {
+                          color: #000051;
+                          font-size: 18px;
+                          line-height: 21px;
+                          margin-bottom: 3px;
+                        }
+
+                        span {
+                          font-size: 14px;
+                          line-height: 16px;
+                          color: #9E9E9E;
+                          display: block;
+                        }
+                      }
+                    }
+
+                    .gift-price {
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                      background: #00C853;
+                      border-radius: 40px;
+                      padding: 0 8px 0 26px;
+                      color: #FFFFFF;
+                      font-weight: bold;
+                      font-size: 12px;
+                      line-height: 24px;
+
+                      &:before {
+                        content: "";
+                        position: absolute;
+                        left: 2px;
+                        top: 1px;
+                        background: url(../../assets/img/LB.svg) no-repeat 50% 50%;
+                        background-size: contain;
+                        width: 20px;
+                        height: 20px;
+                      }
+                    }
+                  }
+
+                  .gift-info {
+                    color: #000051;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                    margin-top: 17px;
+                  }
+                }
+              }
+            }
+
+            &:nth-child(2n) {
+              .card {
+                .card-content {
+                  .card-header {
+                    &:after {
+                      background: url(../../assets/img/card-footer-2.svg) no-repeat 0 0;
+
+                    }
+                  }
+                }
+              }
+            }
+
+            &:not(.swiper-slide-active), &:not(.swiper-slide-duplicate-active) {
+              opacity: 0.1;
+              transform: scale(0.4) translate(-100%, 0);
+              z-index: 108;
+            }
+
+            &.swiper-slide-active,
+            &.swiper-slide-duplicate-active {
+              opacity: 1;
+              transform: scale(1) translate(0, 0);
+              z-index: 110;
+            }
+
+            &.swiper-slide-next,
+            &.swiper-slide-duplicate-next {
+              opacity: 0.3;
+              transform: scale(0.6) translateY(-10%);
+              z-index: 109;
+            }
+
+            &.swiper-slide-prev,
+            &.swiper-slide-duplicate-prev {
+              opacity: 0;
+              transform: scale(0.6) translateY(-10%);
+              z-index: 109;
+            }
+          }
+
+        }
+
+        @media screen and (max-width: 575px) {
+          & {
+            max-width: 100%;
+            width: 100%;
+
+            .arrow {
+              left: 8px;
+              transform: translateY(-100%);
+
+              &.swiper-arrow-next {
+                right: 8px;
+                left: initial;
+              }
+            }
+
+            .gift-slider-carousel {
+              width: 280px;
+              margin: 0 auto;
+
+              &:before, &:after {
+                width: 0;
+              }
+
+              .slide {
+                height: 250px;
+
+                .card {
+                  width: 210px;
+                  height: 250px;
+
+                  .card-content {
+                    .card-header {
+                      width: 210px;
+                      height: 180px;
+
+                      .card-image {
+                        width: 210px;
+                        height: 180px;
+
+                        img {
+                          height: 180px;
+                        }
+                      }
+                    }
+
+                    .card-body {
+                      padding: 0 12px;
+
+                      .gift-header {
+                        .gift-name {
+                          .company-image {
+                            img {
+                              width: 23px;
+                              height: 23px;
+                            }
+                          }
+
+                          .company-title {
+                            margin-left: 8px;
+
+                            div {
+                              color: #000051;
+                              font-size: 12px;
+                              line-height: 14px;
+                              margin-bottom: 1px;
+                            }
+
+                            span {
+                              font-size: 8px;
+                              line-height: 9px;
+                              color: #9E9E9E;
+                              display: block;
+                            }
+                          }
+                        }
+
+                        .gift-price {
+                          position: absolute;
+                          top: 0;
+                          right: 0;
+                          background: #00C853;
+                          border-radius: 40px;
+                          padding: 0 8px 0 16px;
+                          color: #FFFFFF;
+                          font-weight: bold;
+                          font-size: 8px;
+                          line-height: 15px;
+
+                          &:before {
+                            content: "";
+                            position: absolute;
+                            left: 1px;
+                            top: 2px;
+                            background: url(../../assets/img/LB.svg) no-repeat 50% 50%;
+                            background-size: contain;
+                            width: 11px;
+                            height: 11px;
+                          }
+                        }
+                      }
+
+                      .gift-info {
+                        color: #000051;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-top: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      & {
+        padding-top: 60px;
+
+        .cards-list {
+          .cards-calculator {
+            display: none;
+          }
+
+          .cards-slider {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      & {
+        padding-top: 60px;
+
+        .cards-list {
+          .cards-calculator {
+            display: none;
+          }
+
+          .cards-slider {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      & {
+        padding-top: 60px;
+
+        .cards-list {
+          .cards-calculator {
+            display: none;
+          }
+
+          .cards-slider {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      & {
+        .cards-list {
+          .cards-calculator {
+            width: 454px;
+
+            .card {
+              margin-left: 96px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      & {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #send-lb-on-gifts {
+    .section-header .section-title .sub-title {
+      margin-bottom: 19px;
+    }
+
+    .section-content {
+      padding-top: 0;
+    }
+  }
+}

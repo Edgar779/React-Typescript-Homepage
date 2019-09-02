@@ -1,0 +1,144 @@
+#where-need-legend {
+  margin-top: -230px;
+  position: relative;
+  height: 605px;
+  padding-top: 86px;
+  margin-bottom: -175px;
+  z-index: 100;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-image: url(../../assets/img/where-need-legend.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    z-index: -1;
+    opacity: 1;
+  }
+
+  #form-need-legend {
+    .form-content {
+      display: flex;
+      align-items: center;
+
+      .input-container {
+        position: relative;
+        width: 100%;
+
+        input {
+          height: 48px;
+          width: 100%;
+          background: #FFFFFF;
+          box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+          border-radius: 40px;
+          color: #000051;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          padding: 16px 46px;
+          border: none;
+
+          &.error {
+            box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12), 0 0 3px 1px #D50000;
+            color: #D50000;
+          }
+        }
+
+        .helper-text-error {
+          transition: opacity 0.3s;
+          left: 46px;
+          opacity: 0;
+          width: 100%;
+          color: #D50000;
+          position: absolute;
+          bottom: -25px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+
+          &.show {
+            opacity: 1;
+          }
+        }
+      }
+
+      button {
+        margin-left: 30px;
+        position: relative;
+        background: #448AFF;
+        box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+        border-radius: 40px;
+        height: 48px;
+        line-height: 48px;
+        box-sizing: border-box;
+        padding-left: 67px;
+        padding-right: 27px;
+        border: none;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url(../../assets/img/send.svg);
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 32px;
+          height: 32px;
+          opacity: 1;
+          display: block;
+          color: #448aff;
+        }
+
+        span {
+          display: block;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    & {
+      height: initial;
+      margin-bottom: 10px;
+      margin-top: -80px;
+      padding-top: 0;
+
+      #form-need-legend {
+        .form-content {
+          padding: 0 12px;
+
+          button {
+            padding-left: 24px;
+            padding-right: 24px;
+            margin-left: 12px;
+
+            &:before {
+              left: 4px;
+            }
+
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    & {
+      margin-top: -80px;
+    }
+  }
+}

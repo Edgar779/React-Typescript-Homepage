@@ -1,0 +1,170 @@
+#get-bonuses {
+  position: relative;
+  overflow: hidden;
+  &:before{
+    position: absolute;
+    content: "";
+    background: url(../../assets/img/arrow-2.svg) no-repeat;
+    display: block;
+    height: 166px;
+    width: 534px;
+    top: 0;
+    left: 50%;
+    transform: translate(0, -45%);
+  }
+  .company-slider-carousel {
+
+    position: relative;
+
+
+    .slide {
+      transition: 0.3s;
+
+      &:not(.swiper-slide-active), &:not(.swiper-slide-duplicate-active) {
+        opacity: 0.4;
+        transform: scale(0.6) translateY(-90px);
+        filter: grayscale(100%);
+
+        .company__title, .company__branches, .company__discount {
+          opacity: 0;
+        }
+      }
+
+      &.swiper-slide-active,
+      &.swiper-slide-duplicate-active {
+        opacity: 1;
+        transform: scale(1);
+        filter: none;
+
+        .company__title, .company__branches, .company__discount {
+          opacity: 1;
+        }
+      }
+
+      &.swiper-slide-prev,
+      &.swiper-slide-next,
+      &.swiper-slide-duplicate-prev,
+      &.swiper-slide-duplicate-next {
+        opacity: 0.8;
+        transform: scale(0.8) translateY(-20px);
+        filter: grayscale(100%);
+      }
+
+      .company {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .company__title, .company__branches, .company__discount {
+          transition: opacity 0.3s;
+        }
+
+        .company__title {
+          font-size: 16px;
+          line-height: 19px;
+          color: #000051;
+          margin-bottom: 7px;
+        }
+
+        .company__branches {
+          color: rgba(0, 0, 81, 0.4);
+          margin-bottom: 10px;
+        }
+
+        .company__discount {
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 16px;
+          color: rgba(0, 0, 81, 0.4);
+
+          span {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: normal;
+            color: #000051;
+          }
+        }
+
+        .company__logo {
+          width: 92px;
+          height: 92px;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 16px;
+
+          img {
+            width: 92px;
+            height: 92px;
+            box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+            border: solid 4px #ffffff;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .company-counter {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .companies, .branches {
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      .arrow-up{
+        height: 26px;
+        width: 16px;
+        position: relative;
+        margin-right: 6px;
+        &:before {
+          content: "";
+          background-image: url(../../assets/img/arrow-up.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: -1;
+          height: 100%;
+          right: 0;
+        }
+      }
+      .number {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        display: inline-block;
+        margin-right: 6px;
+        color: #000051;
+      }
+
+      span {
+        color: rgba(0, 0, 81, 0.4);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      & {
+        .companies, .branches {
+          align-items: center;
+
+          padding: 0 15px;
+          span {
+            display: block;
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+

@@ -1,0 +1,426 @@
+#collect-lb {
+
+  position: relative;
+  overflow: hidden;
+  &:before{
+    position: absolute;
+    content: "";
+    background: url(../../assets/img/arrow-3.svg) no-repeat;
+    display: block;
+    height: 74px;
+    width: 6px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 30%);
+  }
+  .lb-from {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 75px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      background: url(../../assets/img/arrow-4.svg) no-repeat;
+      display: block;
+      height: 134px;
+      width: 352px;
+      top: 0;
+      left: 50%;
+      transform: translate(40%, -80%);
+    }
+    .item {
+      padding: 0 30px;
+      position: relative;
+
+      &.purchase {
+        .dots {
+          position: absolute;
+          left: 16px;
+          top: -4px;
+
+          i {
+            background: rgba(224, 224, 224, 0.5);
+          }
+        }
+
+        .item__content {
+          .item__header {
+            .item__title {
+              .img__preview {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                div:nth-child(1) {
+                  position: absolute;
+                  right: -120px;
+                  top: -37px;
+                  background: url(../../assets/img/bag-1.png);
+                  width: 101px;
+                  height: 105px;
+                }
+
+                div:nth-child(2) {
+                  position: absolute;
+                  right: -97px;
+                  top: -72px;
+                  background: url(../../assets/img/bag-2.png);
+                  width: 142px;
+                  height: 148px;
+                }
+              }
+
+              &:before {
+                background: linear-gradient(180deg, #28D872 0%, #00C853 100%);
+              }
+
+              &:after {
+                content: "";
+                width: 24px;
+                height: 24px;
+                left: -5px;
+                bottom: -15px;
+                display: block;
+                position: absolute;
+                background: url(../../assets/img/legend-fire.svg) no-repeat;
+              }
+            }
+          }
+        }
+      }
+
+      &.cards {
+        .dots {
+          position: absolute;
+          left: 4px;
+          bottom: -1px;
+          z-index: -1;
+
+          i {
+            background: rgba(224, 224, 224, 0.5);
+          }
+        }
+
+        .item__content {
+          .item__header {
+            .item__title {
+              &:before {
+                background: linear-gradient(180deg, #FFDB13 0%, #FAAC2B 100%);
+              }
+
+              &:after {
+                content: "";
+                width: 24px;
+                height: 24px;
+                right: 10px;
+                top: -16px;
+                display: block;
+                position: absolute;
+                background: url(../../assets/img/legend-fire.svg) no-repeat;
+              }
+
+              .img__preview {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                div:nth-child(1) {
+                  position: absolute;
+                  right: -99px;
+                  top: -45px;
+                  background: url(../../assets/img/ca-holgift.png);
+                  width: 136px;
+                  height: 117px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.review {
+        .dots {
+          position: absolute;
+          right: 28px;
+          bottom: -27px;
+          z-index: -1;
+
+          i {
+            background: rgba(224, 224, 224, 0.5);
+          }
+        }
+
+        .item__content {
+          .item__header {
+            .item__title {
+              .img__preview {
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                div:nth-child(1) {
+                  position: absolute;
+                  right: -98px;
+                  top: -65px;
+                  background: url(../../assets/img/reviews-1.png);
+                  width: 125px;
+                  height: 130px;
+                }
+
+                div:nth-child(2) {
+                  position: absolute;
+                  right: -119px;
+                  top: 5px;
+                  background: url(../../assets/img/reviews-2.png);
+                  width: 70px;
+                  height: 54px;
+                }
+
+                div:nth-child(3) {
+                  position: absolute;
+                  right: -81px;
+                  top: -6px;
+                  background: url(../../assets/img/reviews-3.png);
+                  width: 34px;
+                  height: 27px;
+                }
+
+                div:nth-child(4) {
+                  position: absolute;
+                  right: -113px;
+                  top: -19px;
+                  background: url(../../assets/img/reviews-4.png);
+                  width: 28px;
+                  height: 28px;
+                }
+              }
+
+              &:before {
+                background: linear-gradient(180deg, #448AFF 0%, #285FEE 100%);
+              }
+
+              &:after {
+                content: "";
+                width: 24px;
+                height: 24px;
+                bottom: -14px;
+                right: 16px;
+                display: block;
+                position: absolute;
+                background: url(../../assets/img/legend-fire.svg) no-repeat;
+              }
+            }
+          }
+        }
+      }
+
+      .item__content {
+        .item__header {
+          position: relative;
+
+          .item__title {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 19px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            position: relative;
+            padding: 12px 29px 10px 12px;
+            z-index: 1;
+
+            &:before {
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              content: "";
+              position: absolute;
+              border-radius: 5px;
+              transform: matrix(1, -0.07, 0.07, 1, 0, 0);
+              z-index: -1;
+            }
+          }
+        }
+
+        .text-b {
+          position: relative;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          left: -10px;
+          text-align: center;
+          color: rgba(0, 0, 81, 0.4);
+          padding: 20px 18px 22px 17px;
+
+          &:before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            background: #FFFFFF;
+            box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+            border-radius: 5px;
+            transform: matrix(-1, -0.1, -0.09, 1, 0, 0);
+            z-index: -1;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      & {
+        margin-top: 60px;
+        padding: 0 12px;
+
+        .item {
+          width: 100%;
+
+          &:nth-child(1), &:nth-child(2) {
+            margin-bottom: 90px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      & {
+        .item {
+          width: 100%;
+
+          &:nth-child(1), &:nth-child(2) {
+            margin-bottom: 90px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      & {
+        justify-content: center;
+        margin-left: -30px;
+        margin-right: -30px;
+        padding: 0 30px;
+
+        .item {
+          width: 50%;
+
+          &:nth-child(3) {
+            width: 50%;
+            margin-top: 90px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      & {
+        margin-left: -30px;
+        margin-right: -30px;
+        padding: 0;
+
+        .item {
+          width: 33.3333%;
+        }
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      & {
+        .item {
+          width: 33.3333%;
+        }
+      }
+    }
+  }
+
+  .more-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    padding-bottom: 25px;
+    .watch-video {
+      cursor: pointer;
+      border: none;
+      margin-right: 25px;
+      background: #00C853;
+      color: #ffffff;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transition: 0.3s;
+      animation: pulse-green 2s infinite;
+
+      &:hover {
+        -webkit-animation: none;
+      }
+
+      &:before {
+        content: "";
+        width: 53px;
+        height: 53px;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        background: #00C853;
+        opacity: 0.2;
+        box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+        z-index: -1;
+        border-radius: 50%;
+      }
+
+      &:after {
+        content: "";
+        width: 61px;
+        height: 61px;
+        position: absolute;
+        left: -8px;
+        top: -8px;
+        background: #00C853;
+        opacity: 0.1;
+        z-index: -2;
+        box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+        border-radius: 50%;
+      }
+    }
+
+    .text {
+      .first-row {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        color: #000051;
+      }
+
+      .second-row {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(0, 0, 81, 0.5);
+      }
+    }
+  }
+
+}
+
+@-webkit-keyframes pulse-green {
+  0% {
+  }
+  75% {
+    box-shadow: 0 0 0 15px rgba(#00C853, 0.1), 0 0 0 7px rgba(#00C853, 0.2), 0 0 0 3px rgba(#00C853, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#00C853, 0), 0 0 0 0 rgba(#00C853, 0), 0 0 0 0 rgba(#00C853, 0);
+  }
+}

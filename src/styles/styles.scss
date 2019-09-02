@@ -1,0 +1,57 @@
+/**
+--------------------------------------
+    TABLE OF CONTENTS
+--------------------------------------
+# FONTS
+# VARIALBES
+# MIXINS
+# NORMALIZE
+# GLOBALS
+# CONTENT
+# COMPONENTS
+--------------------------------------
+*/
+// # FONTS
+@import "fonts";
+// # VARIABLES
+//@import "~bootstrap/scss/variables";
+@import "variables";
+// # MIXINS
+//@import "~bootstrap/scss/mixins";
+@import "mixins";
+// # NORMALIZE
+@import "~bootstrap/scss/bootstrap-reboot";
+//@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/dropdown";
+//@import "~bootstrap-vue/src/components/dropdown/index";
+@import "~bootstrap/scss/modal";
+//@import "~bootstrap-vue/src/components/modal/index";
+
+$slick-font-path: '/assets/fonts/';
+$slick-loader-path: "/assets/img/" !default;
+@import "~slick-carousel/slick/slick";
+@import "~swiper/dist/css/swiper.css";
+// # GLOBALS
+@import "globals";
+
+// # HELPERS
+@import "helpers";
+
+// # LAYOUT
+//@import "layout";
+
+// # CONTENT
+@import "content";
+
+// # COMPONENTS
+@import "components/header";
+@import "components/you-choose";
+@import "components/get-bonuses";
+@import "components/send_lb_on_gifts";
+@import "components/collect-lb";
+@import "components/join";
+@import "components/map-section";
+@import "components/where-need-legend";
+@import "components/footer";
+@import "components/sign-up";

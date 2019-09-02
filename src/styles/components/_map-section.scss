@@ -1,0 +1,295 @@
+#map {
+  .map-main-container {
+    position: relative;
+    z-index: 100;
+    border-radius: 0 0 0 70%;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 180px;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      right: 0;
+      background-image: url(../../assets/img/map-top-bg.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center 0;
+      z-index: -1;
+      opacity: 1;
+      border-radius: 0 0 0 70%;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    & {
+      padding-top: 0;
+
+      .map-main-container {
+        border-radius: 0;
+
+        &:after {
+          z-index: -1;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .discount-price {
+    width: 100%;
+    z-index: 100;
+    padding-bottom: 100px;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      align-items: flex-end;
+      li {
+        list-style: none;
+        background: #FFFFFF;
+        padding: 21px 25px;
+        color: #448AFF;
+        box-shadow: 3px 3px 15px rgba(16, 30, 69, 0.12);
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0 6px;
+        &.dot{
+          box-shadow: none;
+          background: #000051;
+          width: 4px;
+          height: 4px;
+          line-height: initial;
+          padding: 0;
+        }
+      }
+    }
+
+    #number-counter-joins-box-num {
+      opacity: 0;
+    }
+
+    .discount-text {
+      margin-top: 32px;
+      color: #000051;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+
+      span {
+        color: #448AFF;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      & {
+        ul, .discount-text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #map-container {
+    z-index: 2;
+    margin-top: -180px;
+    position: relative;
+
+    .yandex-map {
+      height: 1050px;
+      padding-top: 0;
+
+      > div {
+        z-index: 2;
+      }
+
+      > ymaps {
+        z-index: 2;
+      }
+
+      .ymaps-2-1-74-controls__control {
+        z-index: 200;
+      }
+    }
+
+    .last-purchases {
+      position: absolute;
+      height: 1050px;
+      top: 0;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      width: 35%;
+      min-width: 360px;
+      padding: 0 20px;
+      z-index: 1000;
+
+      .purchases-container {
+        max-width: 100%;
+
+        .header-buys {
+          font-size: 24px;
+          line-height: 28px;
+          text-align: center;
+          letter-spacing: 0.04em;
+          color: #000051;
+          margin-bottom: 60px;
+        }
+
+        .purchases-list {
+          width: 320px;
+          min-width: 320px;
+          max-width: 100%;
+
+          .purchase-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .left-info {
+              display: flex;
+              align-items: center;
+
+              .company-logo {
+                width: 44px;
+                height: 44px;
+                overflow: hidden;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              .info {
+                margin-left: 8px;
+
+                .name {
+                  font-weight: normal;
+                  font-size: 18px;
+                  line-height: 21px;
+                  text-align: center;
+                  letter-spacing: 0.04em;
+                  color: #000051;
+                  margin-bottom: 9px;
+                }
+
+                .date {
+                  font-size: 12px;
+                  line-height: 14px;
+                  letter-spacing: 0.04em;
+                  color: #9E9E9E;
+                }
+              }
+            }
+
+            .saved-money-container {
+              .money {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: right;
+                letter-spacing: 0.04em;
+                color: #00C853;
+                margin-bottom: 9px;
+              }
+
+              .descr {
+                font-size: 12px;
+                line-height: 14px;
+                text-align: right;
+                letter-spacing: 0.04em;
+                color: #000051;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      & {
+        margin-top: -50px;
+
+        .yandex-map {
+          height: 355px;
+        }
+
+        .last-purchases {
+          min-width: 320px;
+          position: relative;
+          height: auto;
+          padding-top: 40px;
+          padding-bottom: 100px;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+
+          .purchases-container {
+            .purchases-list {
+              width: 280px;
+              min-width: 280px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      & {
+        .yandex-map {
+          height: 650px;
+        }
+
+        .last-purchases {
+          position: relative;
+          height: auto;
+          padding-top: 40px;
+          padding-bottom: 260px;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      & {
+        margin-top: -80px;
+
+        .yandex-map {
+          height: 680px;
+        }
+
+        .last-purchases {
+          padding-top: 40px;
+          height: 100%;
+        }
+      }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      & {
+        .last-purchases {
+          padding-top: 40px;
+        }
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      & {
+        .last-purchases {
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+}
