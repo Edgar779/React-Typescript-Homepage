@@ -1,1 +1,63 @@
 @import "styles/styles";
+
+.errorMessage{
+    color: red;
+    font-size: 12px;
+    margin-top: 11px;
+}
+.errorM{
+    margin-bottom: 10px;
+}
+.row-input{
+    display: flex;
+  flex-direction: column;
+}
+
+  .lef{
+      margin-left: 40px;
+  }
+  
+  $background_color_1: green;
+  $border_color_1: green;
+  
+  .custom-control-input {
+    &:checked {
+      &~.custom-control-label {
+        &::before {
+          border-color: $border_color_1;
+          background-color: $background_color_1;
+        }
+      }
+    }
+  }
+  $color_1: green;
+
+input[type="radio"] {
+	&:checked {
+		&+label {
+			color: $color_1;
+		}
+	}
+}
+input[type="checkbox"] {
+	&:checked {
+		&+label {
+			color: $color_1;
+		}
+	}
+}
+  .txt{
+    font-size: 12px;
+  }
+  #modal-reg-start .row .col .step form .row-input-variants .variants{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+
+  }
+  .custom-control{
+    flex-basis: 50%;
+  } 
+  .lef{
+    margin-left: 60px;
+  }
